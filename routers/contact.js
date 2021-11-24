@@ -1,5 +1,5 @@
 import express from "express";
-import {transporter} from "../nodemailer/nodemailer.js";
+import { transporter } from "../nodemailer.js";
 import { createPage }  from "../render.js";
 
 const contactRouter = express.Router();
