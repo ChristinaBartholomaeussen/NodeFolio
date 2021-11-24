@@ -1,0 +1,98 @@
+main {
+    min-height: calc(100vh - 131px);
+    display: flex;
+    justify-content: center;
+    margin: 2%;
+}
+
+body {
+    font-family: 'Courier New', monospace;
+}
+
+hr {
+    color: var(--my-secondary);
+}
+
+hr:not([size]){
+    height: 3px;
+}
+
+.project-div {
+    word-break: break-all;
+}
+
+
+.footer {
+    background-color: var(--my-primary);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.footer p {
+    margin: 10px;
+}
+
+.footer a:hover{
+    color: var(--my-secondary);
+}
+
+nav {
+    background-color: var(--my-primary);
+}
+
+
+.nav-link {
+    border-radius: 10px;
+    color: black;
+    margin-right: 20px;
+    text-align: center;
+    width: 150px;
+}
+.form-control:focus{
+    border-color: var(--my-secondary);  
+    -moz-box-shadow: 0 0 3px var(--my-secondary);
+    -webkit-box-shadow: 0 0 3px var(--my-secondary);
+    box-shadow: 0 0 10px var(--my-secondary);
+}
+
+.nav-link:hover {
+    color: black;
+    background-color: var(--my-secondary);
+}
+
+.link {
+    color: black;
+}
+
+.link:hover {
+    color: var(--my-secondary);
+}
+
+.btnMain {
+    background-color: var(--my-bla1);
+}
+.btnMain:hover {
+    background-color: var(--my-secondary);
+}
+
+.navbar>.container-fluid {
+    display: flex;
+    justify-content: start;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover{
+    color: black;
+    text-decoration: none;
+}
+
+:root {
+    --my-primary: rgb(252, 216, 212);
+    --my-secondary: rgb(245, 198, 170);
+    --my-bla1: rgb(248, 226, 207);
+    --my-bla2: rgb(253, 246, 240);
+}

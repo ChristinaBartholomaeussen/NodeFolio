@@ -1,0 +1,6 @@
+encryption.js
+mydb.db
+/package-lock.json
+node_modules/
+nodemailer/
+
