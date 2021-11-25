@@ -2,6 +2,7 @@
     "main": "app.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "nodemon app.js",
         "create-sqlite-db": "node ./database/createSqlSchema.js"
     },
     "type": "module",
