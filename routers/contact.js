@@ -1,6 +1,6 @@
 import express from "express";
-import { transporter } from "../nodemailer.js";
 import { createPage }  from "../render.js";
+import nodemailer from "nodemailer";
 
 const contactRouter = express.Router();
 
@@ -12,12 +12,30 @@ contactRouter.get("/", (req, res) => {
     res.send(contactPage);
 });
 
+import dotenv from "dotenv";
+
 contactRouter.post("/api", async (req, res) => {
+
+    dotenv.config();
+
     for (let p in req.body) {
         if (req.body[p] === '') {
             return res.status(400).send();
         }
     }
+
+    
+    
+    const transporter = nodemailer.createTransport({
+        port: 465,
+        host: "smtp.gmail.com",
+        auth: {
+            user: "c.m.bartholo@gmail.com",
+            pass: process.env.NODEMAILER_PASS
+        },
+        secure: true,
+    });
+
     const mailOptions = {
         from: req.body.email,
         to: "c.m.bartholo@gmail.com",
